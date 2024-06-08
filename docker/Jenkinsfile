@@ -11,7 +11,7 @@ pipeline{
     stages {
         stage('Checkout From Git'){
             steps{
-                git branch: 'master', url: 'https://github.com/eyaboubaker/Devscops.git'
+                git branch: 'develop', url: 'https://github.com/saif33BA/devops.git'
             }
         }
         stage('mvn compile'){
