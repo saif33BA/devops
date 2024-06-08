@@ -7,8 +7,9 @@ echo -e "\nSet docker image name as ${IMAGE_NAME}\n"
 PORT=8070
 echo -e "Set docker image PORT to ${PORT}\n"
 
-echo -e "Create uber jar...\n"
+echo -e "Create jar...\n"
 mvn clean package
+#
 
 echo -e "\nStop running Docker containers with image tag ${CONTAINER_NAME}, and remove them...n"
 docker stop $(docker ps -a | grep ${CONTAINER_NAME} | awk '{print $1}')
